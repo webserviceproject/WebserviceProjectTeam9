@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="20c8fdd8-4946-43fe-a0b4-f19dc42db185" name="seedm@DESKTOP-L3A0BED 2023-03-15T22:45:18.535Z" runUser="seedm" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="dbbcdd10-ad79-49f7-b14e-5c713ac819d2"/>
+  <Times creation="2023-03-15T22:45:18.535Z" queuing="2023-03-15T22:45:18.535Z" start="2023-03-15T22:45:18.535Z" finish="2023-03-15T22:45:18.535Z"/>
+  <ResultSummary outcome="Passed">
+    <Counters total="10" executed="10" passed="10" failed="0" error="0"/>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="testing / render the ABOUT THE APP title" id="356e32cc-75ff-4e4b-ab5d-f835fe85a929" storage="src\App.test.js">
+      <Execution id="c22a6909-5b1c-4399-bdfc-2529c5c9fd27"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render the ABOUT THE APP title" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render the ABOUT THE APP title" id="33f3d0d3-e7da-4668-99ec-3fad7fa68f7c" storage="src\App.test.js">
+      <Execution id="40f73026-487d-4950-8ef1-3b1036541994"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render the ABOUT THE APP title" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render the ABOUT THE APP title" id="85b02e88-c877-4a9d-9f1b-7339c0629165" storage="src\App.test.js">
+      <Execution id="2351d17c-dbf1-4acc-ab24-be9c3afa9de4"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render the ABOUT THE APP title" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render text in our story" id="222a087b-0092-4d3e-8e63-aca26a3461b9" storage="src\App.test.js">
+      <Execution id="d7a2cba7-a626-4bee-b01d-88f4e156bee6"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render text in our story" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render contact us title" id="815b2fba-d0d0-4aca-a26f-f362833e74e5" storage="src\App.test.js">
+      <Execution id="adf76123-427b-4fa2-a7d0-3eebb0c1408c"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render contact us title" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render the mail link in contact us page" id="0096d2d2-bba4-4ff8-bf11-64b933eeb1bd" storage="src\App.test.js">
+      <Execution id="918f9232-63a0-4f37-aa7e-d455de5153d8"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render the mail link in contact us page" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render contact us team number" id="934c80ec-7d07-4d78-8cf0-fdefd821f764" storage="src\App.test.js">
+      <Execution id="018135e2-e3eb-4904-a16e-d769ff49302b"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render contact us team number" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render contact us team header" id="345b3fbc-cb47-4d85-a5fb-afc8f0715ce5" storage="src\App.test.js">
+      <Execution id="1eff8fd6-d925-4849-9c1d-9871955ea25e"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render contact us team header" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render team member --- veeramma" id="8121766c-04ec-4f49-bca0-0fdcd46f5263" storage="src\App.test.js">
+      <Execution id="c9299731-fe9d-4981-a01f-c5d28570f23a"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render team member --- veeramma" className="testing"/>
+    </UnitTest>
+    <UnitTest name="testing / render team member --- Sahith" id="a169dfd9-a004-43d9-bd4f-f4801996a578" storage="src\App.test.js">
+      <Execution id="71327a33-76da-484f-bd96-d89dc91f5fe9"/>
+      <TestMethod codeBase="src\App.test.js" name="testing / render team member --- Sahith" className="testing"/>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="356e32cc-75ff-4e4b-ab5d-f835fe85a929" executionId="c22a6909-5b1c-4399-bdfc-2529c5c9fd27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="33f3d0d3-e7da-4668-99ec-3fad7fa68f7c" executionId="40f73026-487d-4950-8ef1-3b1036541994" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="85b02e88-c877-4a9d-9f1b-7339c0629165" executionId="2351d17c-dbf1-4acc-ab24-be9c3afa9de4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="222a087b-0092-4d3e-8e63-aca26a3461b9" executionId="d7a2cba7-a626-4bee-b01d-88f4e156bee6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="815b2fba-d0d0-4aca-a26f-f362833e74e5" executionId="adf76123-427b-4fa2-a7d0-3eebb0c1408c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="0096d2d2-bba4-4ff8-bf11-64b933eeb1bd" executionId="918f9232-63a0-4f37-aa7e-d455de5153d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="934c80ec-7d07-4d78-8cf0-fdefd821f764" executionId="018135e2-e3eb-4904-a16e-d769ff49302b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="345b3fbc-cb47-4d85-a5fb-afc8f0715ce5" executionId="1eff8fd6-d925-4849-9c1d-9871955ea25e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8121766c-04ec-4f49-bca0-0fdcd46f5263" executionId="c9299731-fe9d-4981-a01f-c5d28570f23a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a169dfd9-a004-43d9-bd4f-f4801996a578" executionId="71327a33-76da-484f-bd96-d89dc91f5fe9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+  </TestEntries>
+  <Results>
+    <UnitTestResult testId="356e32cc-75ff-4e4b-ab5d-f835fe85a929" executionId="c22a6909-5b1c-4399-bdfc-2529c5c9fd27" testName="testing / render the ABOUT THE APP title" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:21.116Z" endTime="2023-03-15T22:45:21.859Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="33f3d0d3-e7da-4668-99ec-3fad7fa68f7c" executionId="40f73026-487d-4950-8ef1-3b1036541994" testName="testing / render the ABOUT THE APP title" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:21.859Z" endTime="2023-03-15T22:45:22.602Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="85b02e88-c877-4a9d-9f1b-7339c0629165" executionId="2351d17c-dbf1-4acc-ab24-be9c3afa9de4" testName="testing / render the ABOUT THE APP title" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:22.602Z" endTime="2023-03-15T22:45:23.345Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="222a087b-0092-4d3e-8e63-aca26a3461b9" executionId="d7a2cba7-a626-4bee-b01d-88f4e156bee6" testName="testing / render text in our story" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:23.345Z" endTime="2023-03-15T22:45:24.088Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="815b2fba-d0d0-4aca-a26f-f362833e74e5" executionId="adf76123-427b-4fa2-a7d0-3eebb0c1408c" testName="testing / render contact us title" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:24.088Z" endTime="2023-03-15T22:45:24.831Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="0096d2d2-bba4-4ff8-bf11-64b933eeb1bd" executionId="918f9232-63a0-4f37-aa7e-d455de5153d8" testName="testing / render the mail link in contact us page" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:24.831Z" endTime="2023-03-15T22:45:25.574Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="934c80ec-7d07-4d78-8cf0-fdefd821f764" executionId="018135e2-e3eb-4904-a16e-d769ff49302b" testName="testing / render contact us team number" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:25.574Z" endTime="2023-03-15T22:45:26.317Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="345b3fbc-cb47-4d85-a5fb-afc8f0715ce5" executionId="1eff8fd6-d925-4849-9c1d-9871955ea25e" testName="testing / render contact us team header" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:26.317Z" endTime="2023-03-15T22:45:27.060Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8121766c-04ec-4f49-bca0-0fdcd46f5263" executionId="c9299731-fe9d-4981-a01f-c5d28570f23a" testName="testing / render team member --- veeramma" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:27.060Z" endTime="2023-03-15T22:45:27.803Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a169dfd9-a004-43d9-bd4f-f4801996a578" executionId="71327a33-76da-484f-bd96-d89dc91f5fe9" testName="testing / render team member --- Sahith" computerName="DESKTOP-L3A0BED" duration="00:00:00.743" startTime="2023-03-15T22:45:27.803Z" endTime="2023-03-15T22:45:28.546Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+  </Results>
+</TestRun>

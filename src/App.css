@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 100vmin;
   pointer-events: none;
 }
 
@@ -13,26 +13,293 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  min-height: 50px;
+  z-index: 1;
+  background: #fff;
+  margin-top: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  margin-bottom: 0px !important;
+}
+.navbar li{
+  display:block;
+  text-decoration: none;
+}
+.navbar li a{
+  color: #cf0ce8;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 80px;
+  text-decoration: none;
+  padding: 16px 10px;
+  font-family: proxima-nova,sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-variant-position: normal;
+}
+
+
+.navbar li a:hover{
+  background-color: #0837f3;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image{
+  height: 100%;
+  width: 100%;
+  top:-21px;
+  z-index: -1;
+  text-align: center;
+  background-size: cover;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inside{
+  padding: 50px;
+  width: 33.3333334%;  
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+
+}
+.Highlight{
+  padding: 5px;
+    margin: 25px 15%;
+    background: linear-gradient(to right, rgba(234,89,18,1) 0%,rgba(247,25,92,1) 100%);
+    border-radius: 500px;
+}
+.HighlightIconInner{
+  border-radius: 800px;
+  background: rgba(23, 4, 26, 0.779);
+  position: inherit;
+  box-sizing: border-box;
+}
+.HighlightIconInner img{
+  padding:38px 30px 66px 30px;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.HighlightIconInner p{
+  margin:0;
+}
+.inside:hover{
+  transform-origin: center;
+    transform: scale(1.1);
+    cursor: default;
+}
+
+.logo-nav:hover .logo-img{
+  background-color: white;
+}
+
+.home h1{
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: inherit;
+}
+.home button{
+  padding: 12.4px 33px;    
+    margin-left: 5px;
+    color: #f8049b;
+    outline: 0;
+    font-weight: 800;
+    position: relative;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    background: 0 0;
+    border: 3px solid #FFF;
+    border-radius: 4px;
+    letter-spacing: .02em;
+}
+.home button:hover{
+  background: #fff;
+  border: 3px solid #0945eb;
+  color: #0945eb;
+}
+
+html, body{
+  width: 100%;
+  height: 100%; 
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.page-title {
+  display: flex;
+  height: 200px;
+  background-image: linear-gradient(to bottom right, #77838d, #9608b9 75.63%);
+  align-items: center; 
+  color: white;
+  justify-content: center;
+}
+
+.page-title h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.body-row, .section-title, .section-title1, .section-content{
+  padding-left: -50px;
+}
+
+.body-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;  
+}
+
+.section-title, .section-title1, .section-content{
+  word-wrap: break-word;      
+  width: 100%;
+  font-family: "Source Sans Pro";
+}
+
+.section-title h2 {
+  font-size: 25px;
+  color: #d70af2;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding-right: -50px;
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.section-title1 h2 {
+  font-size: 25px;
+  color: #d70af2;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-right: -50px;
+}
+
+.section-content p {
+  font-size: 10px;
+  text-align: left;
+}
+
+.member-info {
+  display: flex; 
+  font-family: "Source Sans Pro";
+  flex-direction: column;
+  justify-content: center;
+}
+
+.member-info h3 {
+  margin-top: 10px;
+}
+
+.member-info h5 {
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.member-info p {
+  font-size: 14px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .logo-nav{
+    left: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar li:last-child{
+    margin-right: 30px;
+  }
+  .body-row, .section-title, .section-content{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .section-title, .section-title1 h2{
+    font-size: 22px;
+  }
+  .section-content p{
+    font-size: 18px;
+    width: 1000px;
+  }
+  .member-info h3{
+    font-size: 24px;
+  }
+  .member-info h5{
+    font-size: 18px;
+  }
+  .member-info p{
+    font-size: 16px;
   }
 }
+
+@media only screen and (min-width: 992px) {
+  .logo-nav{
+    left: 50px;
+    margin-bottom: 10px;
+  }
+  .navbar li:last-child{
+    margin-right: 50px;
+  }
+  .body-row, .section-title, .section-content{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .body-row-member{
+    flex-direction: row;
+  }
+  .member-info{
+    padding-left: 30px;
+    text-align: left;
+  }
+  .body-row-member{
+    margin-bottom: 60px;
+  }
+
+
+  .separation::after{
+    content: "\00a0\00a0\00a0\00a0\00a0|";
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .mobile{
+    display: block !important;
+  }
+  .inside{
+    width: 350px;
+        display: inline-block;
+    align-items: center;
+    justify-content: center;
+  }
+  .rowin{
+    padding-left: 0px !important;
+  }
+  .game-name-div {
+    width: 40px !important;
+    height: 35px !important;
+  }
+  .game-name-board {
+    margin: 30px 20px 30px 5px !important;
+  }
+ 
+}
+ .move{
+  display: flex;
+  flex-direction: column;
+  order: 3;
+} 
