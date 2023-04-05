@@ -12,6 +12,7 @@ import Started from './start.js';
 import HomePage from './homePage'
 import AboutUS from './aboutUS';
 import {Image } from 'react-bootstrap';
+import {BeginMatching} from './BeginMatching';
 
 function App() {
 
@@ -63,7 +64,7 @@ function App() {
             </Route>
 
             <Route path="/start">
-              <Started />
+              <BeginMatching />
             </Route>           
            
           </Switch>
