@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import AboutTheApp from './aboutTheApp';
 import AboutUS from './aboutUS';
 import ContactUS from './contactUS';
+import { BeginMatching } from './BeginMatching';
 
 configure({adapter: new Adapter()});
 
@@ -69,6 +70,72 @@ test("render team member --- veeramma", () => {
 test("render team member --- Sahith", () => {
   const element = shallow(<ContactUS/>);
   expect(element.find('.SahithName h3').text()).toContain("Sahith Vancha");
+});
+
+
+// Sprint2 testing
+
+//  Test #11  
+test('render the ABOUT THE APP time title', () => {
+  const element = shallow(<AboutTheApp/>);
+  expect(element.find('.insidetime h3').text()).toContain("Time");
+
+});
+
+// Test #12 
+test('render the ABOUT THE APP quality title', () => {
+  const element = shallow(<AboutTheApp/>);
+  expect(element.find('.insidequality h3').text()).toContain("Quality");
+
+});
+
+// Test #13
+test("render the BeginMatching", () => {
+const element = shallow(<BeginMatching/>);
+expect(element.find('.fname label').text()).toContain("First Name");
+});
+    
+// Test #14
+test("render BeginMatching", ()=>{
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.fname label').text()).toContain("First Name");
+
+});
+
+// Test #15
+test("render BeginMatching", () => {
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.lname label').text()).toContain("Last Name");
+});
+
+  // Test #16
+test("render the BeginMatching", () => {
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.rankLevel label').text()).toContain("Rank Level");
+});
+
+// Test #17
+test("render BeginMatching", () => {
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.wins label').text()).toContain("Wins");
+});
+
+// Test #18
+test("render BeginMatching", () => {  
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.numOfGames label').text()).toContain("number of Games");
+});
+
+// Test #19
+test("render BeginMatching", () => {
+  const element = shallow(<BeginMatching/>);
+  expect(element.find('.attitude label').text()).toContain("Attitude");
+});
+
+// Test 20
+test("render BeginMatching", () => {
+const element = shallow(<BeginMatching/>);
+expect(element.find('.tabnamecn h1').text()).toContain("Players List");
 });
 
   })

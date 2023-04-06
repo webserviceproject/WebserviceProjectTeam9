@@ -26,7 +26,7 @@ function AboutTheApp() {
             <Row style={{ paddingLeft: "100px" }} className="rowin">
                 <Col lg={{ size: 10, offset: 1 }} md={{ size: 12, offset: 1 }} center-block>
 
-                    <Col className="inside" md="4">
+                    <Col className="inside insidetime" md="4">
                         <div className="Highlight">
                             <div className="HighlightIconInner">
                                 <div>  <img src={time} />
@@ -39,7 +39,7 @@ function AboutTheApp() {
                         </div>
                     </Col>
 
-                    <Col md="4" className="inside">
+                    <Col md="4" className="inside insidequality">
                         <div className="Highlight">
                             <div className="HighlightIconInner">
                                 <div>  <img src={quality} />
