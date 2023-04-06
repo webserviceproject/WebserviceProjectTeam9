@@ -70,6 +70,9 @@ export class BeginMatching extends React.Component {
     }
 
     componentDidMount(){
+        alert("componentdidmount");
+        if (this._Mounted1 == true) {
+            alert("mounted1 true");
         this.getPlayers().then((response) => {
             console.log(response);
             this.setState({ players: response.data})
@@ -86,8 +89,11 @@ export class BeginMatching extends React.Component {
                 console.log(ele.value);
             })
         }); 
-        this._Mounted = true;
+        this._Mounted1=false;        
+    }
+       // this._Mounted = true;
         if (this._Mounted) {
+            alert("mounted true");
         this.getPlayerBySearchDetails().then((response) => {
             console.log(response);
            // alert("getplayersbysearch call");
@@ -105,6 +111,7 @@ export class BeginMatching extends React.Component {
                 console.log(ele.value);
             })
         }); 
+        this._Mounted = false;
     }
     }
 
@@ -113,7 +120,9 @@ export class BeginMatching extends React.Component {
     }
 
     getPlayers(){       
-       // alert("before the getplayer call"); 
+     alert("before the getplayer call"); 
+       this._Mounted1 = true;
+       this._Mounted = false;
         return axios.get(PLAYERS_REST_API_URL);/*.then((response) =>{
             console.log("getplayer inside response called");
             alert("getplayer insee called");
@@ -131,6 +140,8 @@ export class BeginMatching extends React.Component {
     }   
 
     getPlayerBySearchDetails = async () => {
+        this._Mounted = true;
+        this._Mounted1 = false;
         let playerobj = {firstName: this.state.firstName, lastName: this.state.lastName, wins: this.state.wins, 
             numOfMatches: this.state.numOfMatches, rankLevel: this.state.rankLevel, attitude: this.state.attitude};
            // alert("before the service call in by search");
