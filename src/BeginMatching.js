@@ -27,8 +27,7 @@ export class BeginMatching extends React.Component {
         this.updateNoOfGames = this.updateNoOfGames.bind(this);
         this.updateRankLevel = this.updateRankLevel.bind(this);
         this.updateWin = this.updateWin.bind(this);
-        this.updateAttitude=this.updateAttitude.bind(this);
-        this.updateflags=this.updateflags.bind(this);
+        this.updateAttitude=this.updateAttitude.bind(this); 
         this.getPlayers = this.getPlayers.bind(this);
         this.getPlayerBySearchDetails = this.getPlayerBySearchDetails.bind(this);
     }
@@ -69,18 +68,6 @@ export class BeginMatching extends React.Component {
         this.setState({
             attitude: event.target.value}
             )
-    }
-
-    updateflags = async () => {
-        alert("before change of flag val"+this.state.flagval);
-        let flg=true;
-        this.setState((preState, props) => ({
-            [preState.flagval]: [preState.flagval]? false: true
-            //flagval: flg
-        }));
-       
-        this.setState({flagval: !this.state.flagval}); 
-        alert(" after change of flag val"+this.state.flagval);      
     }
 
    
