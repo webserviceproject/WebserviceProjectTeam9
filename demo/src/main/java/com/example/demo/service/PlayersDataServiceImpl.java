@@ -63,6 +63,9 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 			}else if(null!= playerutil.getNumOfMatches() && !playerutil.getNumOfMatches().isEmpty()) {
 				System.out.println("inside numofmatches");
 				utilList=getPlayersDataByNumOfMatches(playerutil.getNumOfMatches());
+			}else if(null!= playerutil.getAttitude() && !playerutil.getAttitude().isEmpty()) {
+				System.out.println("inside numofmatches");
+				utilList=getPlayersDataByAttitude(playerutil.getAttitude().toUpperCase());
 			}else {
 				System.out.println("inside else");
 				utilList=null;
@@ -103,12 +106,22 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 		List<PlayersEntity> entityList= daoInterface.getPlayersDataByLastName(lName);
 		if(null!=entityList) {
 			List<PlayersUtil> utilList= new ArrayList<PlayersUtil>();
-			entityList.forEach(entity ->{
-				PlayersUtil util=modelMapper.map(entityList, PlayersUtil.class);
+			entityList.forEach(obj ->{
+				PlayersUtil util = new PlayersUtil();
+				util.setFirstName(obj.getFirstName());
+				util.setLastName(obj.getLastName());
+				util.setNumOfMatches(obj.getNumOfMatches());
+				util.setWins(obj.getWins());
+				util.setRankLevel(obj.getRankLevel());
+				util.setAttitude(obj.getAttitude());
+				util.setSno(obj.getSno());
+				System.out.println("util object value is"+util.toString());
 				utilList.add(util);
 			});
+			System.out.println("returns utils list with values in fname");
 			return utilList;
 		}
+		System.out.println("before null infname service");
 		return null;
 	}
 
@@ -117,12 +130,22 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 		List<PlayersEntity> entityList= daoInterface.getPlayersDataByWins(wins);
 		if(null!=entityList) {
 			List<PlayersUtil> utilList= new ArrayList<PlayersUtil>();
-			entityList.forEach(entity ->{
-				PlayersUtil util=modelMapper.map(entityList, PlayersUtil.class);
+			entityList.forEach(obj ->{
+				PlayersUtil util = new PlayersUtil();
+				util.setFirstName(obj.getFirstName());
+				util.setLastName(obj.getLastName());
+				util.setNumOfMatches(obj.getNumOfMatches());
+				util.setWins(obj.getWins());
+				util.setRankLevel(obj.getRankLevel());
+				util.setAttitude(obj.getAttitude());
+				util.setSno(obj.getSno());
+				System.out.println("util object value is"+util.toString());
 				utilList.add(util);
 			});
+			System.out.println("returns utils list with values in fname");
 			return utilList;
 		}
+		System.out.println("before null infname service");
 		return null;
 	}
 
@@ -131,12 +154,22 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 		List<PlayersEntity> entityList= daoInterface.getPlayersDataByRanklevel(ranklevel);
 		if(null!=entityList) {
 			List<PlayersUtil> utilList= new ArrayList<PlayersUtil>();
-			entityList.forEach(entity ->{
-				PlayersUtil util=modelMapper.map(entityList, PlayersUtil.class);
+			entityList.forEach(obj ->{
+				PlayersUtil util = new PlayersUtil();
+				util.setFirstName(obj.getFirstName());
+				util.setLastName(obj.getLastName());
+				util.setNumOfMatches(obj.getNumOfMatches());
+				util.setWins(obj.getWins());
+				util.setRankLevel(obj.getRankLevel());
+				util.setAttitude(obj.getAttitude());
+				util.setSno(obj.getSno());
+				System.out.println("util object value is"+util.toString());
 				utilList.add(util);
 			});
+			System.out.println("returns utils list with values in fname");
 			return utilList;
 		}
+		System.out.println("before null infname service");
 		return null;
 	}
 
@@ -145,12 +178,22 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 		List<PlayersEntity> entityList= daoInterface.getPlayersDataByAttitude(attitude);
 		if(null!=entityList) {
 			List<PlayersUtil> utilList= new ArrayList<PlayersUtil>();
-			entityList.forEach(entity ->{
-				PlayersUtil util=modelMapper.map(entityList, PlayersUtil.class);
+			entityList.forEach(obj ->{
+				PlayersUtil util = new PlayersUtil();
+				util.setFirstName(obj.getFirstName());
+				util.setLastName(obj.getLastName());
+				util.setNumOfMatches(obj.getNumOfMatches());
+				util.setWins(obj.getWins());
+				util.setRankLevel(obj.getRankLevel());
+				util.setAttitude(obj.getAttitude());
+				util.setSno(obj.getSno());
+				System.out.println("util object value is"+util.toString());
 				utilList.add(util);
 			});
+			System.out.println("returns utils list with values in fname");
 			return utilList;
 		}
+		System.out.println("before null infname service");
 		return null;
 	}
 
@@ -159,12 +202,22 @@ public class PlayersDataServiceImpl implements PlayersDataServiceInterface {
 		List<PlayersEntity> entityList= daoInterface.getPlayersDataByNumOfMatches(numOfMatches);
 		if(null!=entityList) {
 			List<PlayersUtil> utilList= new ArrayList<PlayersUtil>();
-			entityList.forEach(entity ->{
-				PlayersUtil util=modelMapper.map(entityList, PlayersUtil.class);
+			entityList.forEach(obj ->{
+				PlayersUtil util = new PlayersUtil();
+				util.setFirstName(obj.getFirstName());
+				util.setLastName(obj.getLastName());
+				util.setNumOfMatches(obj.getNumOfMatches());
+				util.setWins(obj.getWins());
+				util.setRankLevel(obj.getRankLevel());
+				util.setAttitude(obj.getAttitude());
+				util.setSno(obj.getSno());
+				System.out.println("util object value is"+util.toString());
 				utilList.add(util);
 			});
+			System.out.println("returns utils list with values in fname");
 			return utilList;
 		}
+		System.out.println("before null infname service");
 		return null;
 	}
 

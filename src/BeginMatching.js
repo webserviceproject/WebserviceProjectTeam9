@@ -1,7 +1,6 @@
-import React from 'react';
-//import {MatchingPlayersInfoService} from '../MatchingPlayersInfoService';
-import axios from 'axios'
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react'; 
+import axios from 'axios';
+
 
 const PLAYERS_REST_API_URL = 'http://localhost:8010/KSUAPI/players';
 const PLAYERS_BY_SEARCH ='http://localhost:8010/KSUAPI/playersbySearch';
@@ -16,10 +15,12 @@ export class BeginMatching extends React.Component {
             lastName: '',
             rankLevel: '',
             wins: '',
-            noOfGames: '',
-            attitude: ''
+            numOfMatches: '',
+            attitude: '',
+            flagval: false,
+            flagval1: false
         }
-        
+                
         // call the update functions
         this.updateFirstName = this.updateFirstName.bind(this);
         this.updateLasttName = this.updateLasttName.bind(this);
@@ -27,8 +28,9 @@ export class BeginMatching extends React.Component {
         this.updateRankLevel = this.updateRankLevel.bind(this);
         this.updateWin = this.updateWin.bind(this);
         this.updateAttitude=this.updateAttitude.bind(this);
-       // this.getPlayers = this.getPlayers.bind(this);
-        //this.getPlayerBySearchDetails = this.getPlayerBySearchDetails.bind(this);
+        this.updateflags=this.updateflags.bind(this);
+        this.getPlayers = this.getPlayers.bind(this);
+        this.getPlayerBySearchDetails = this.getPlayerBySearchDetails.bind(this);
     }
 
     _Mounted = false;
@@ -69,93 +71,46 @@ export class BeginMatching extends React.Component {
             )
     }
 
-    componentDidMount(){
-        alert("componentdidmount");
-        if (this._Mounted1 == true) {
-            alert("mounted1 true");
-        this.getPlayers().then((response) => {
-            console.log(response);
-            this.setState({ players: response.data})
-            console.log(this.state.players);
-            this.state.players.map( player =>{
-                console.log(player.firstName);
-                console.log(player.lastName);
-                console.log(player.numOfMatches);
-                console.log(player.rankLevel);
-                console.log(player.wins);
-                console.log(player.attitude);
-            });
-            this.state.players.forEach( ele => {
-                console.log(ele.value);
-            })
-        }); 
-        this._Mounted1=false;        
-    }
-       // this._Mounted = true;
-        if (this._Mounted) {
-            alert("mounted true");
-        this.getPlayerBySearchDetails().then((response) => {
-            console.log(response);
-           // alert("getplayersbysearch call");
-            this.setState({ players: response.data})
-            console.log(this.state.players);
-            this.state.players.map( player =>{
-                console.log(player.firstName);
-                console.log(player.lastName);
-                console.log(player.numOfMatches);
-                console.log(player.rankLevel);
-                console.log(player.wins);
-                console.log(player.attitude);
-            });
-            this.state.players.forEach( ele => {
-                console.log(ele.value);
-            })
-        }); 
-        this._Mounted = false;
-    }
+    updateflags = async () => {
+        alert("before change of flag val"+this.state.flagval);
+        let flg=true;
+        this.setState((preState, props) => ({
+            [preState.flagval]: [preState.flagval]? false: true
+            //flagval: flg
+        }));
+       
+        this.setState({flagval: !this.state.flagval}); 
+        alert(" after change of flag val"+this.state.flagval);      
     }
 
-    componentWillUnmount() {
-        this._Mounted = false;
-    }
-
-    getPlayers(){       
-     alert("before the getplayer call"); 
-       this._Mounted1 = true;
-       this._Mounted = false;
-        return axios.get(PLAYERS_REST_API_URL);/*.then((response) =>{
-            console.log("getplayer inside response called");
-            alert("getplayer insee called");
-            this.setState({ players: response.data});
-            console.log("getplayer after set statecalled");
-            alert("getplayer after set  called");
-            this.state.players.forEach( ele => {
-                console.log(ele.value);
-                console.log("getplayer inside foreach called");
-                alert("getplayer inside foreach called");
-                alert(ele.value);
-            });
-
-        });*/
+   
+    
+     getPlayers = async (e) => {   
+        e.preventDefault();   
+          
+        const apidata = await axios.get(PLAYERS_REST_API_URL);
+        this.setState({ players: apidata.data});
+         
     }   
 
-    getPlayerBySearchDetails = async () => {
-        this._Mounted = true;
-        this._Mounted1 = false;
-        let playerobj = {firstName: this.state.firstName, lastName: this.state.lastName, wins: this.state.wins, 
-            numOfMatches: this.state.numOfMatches, rankLevel: this.state.rankLevel, attitude: this.state.attitude};
-           // alert("before the service call in by search");
+    componentDidMount(){
+        console.log("inside did mount");
+    }
 
-          /* axios.post(PLAYERS_BY_SEARCH, playerobj).then((respose) => {
-                this.setState({ players: respose.data});
-            })*/
-       return axios.post(PLAYERS_BY_SEARCH, playerobj);
-       
-       // this.setState({ players: respose.data });
+
+    
+    getPlayerBySearchDetails = async (e) => {       
+        e.preventDefault();
+        let playerobj = {firstName: this.state.firstName, lastName: this.state.lastName, wins: this.state.wins, 
+            numOfMatches: this.state.noOfGames, rankLevel: this.state.rankLevel, attitude: this.state.attitude};           
+
+            const apidata = await axios.post(PLAYERS_BY_SEARCH, playerobj)
+        this.setState({ players: apidata.data});
+      
     }
 
     render (){ 
-
+        console.log("inside d=render");
       return ( 
         <div>           
                <div className = "container">
@@ -195,11 +150,11 @@ export class BeginMatching extends React.Component {
                                     <div className = "form-group attitude">
                                         <label>Attitude: </label>
                                         <input placeholder="Attitude" name="attitude" className="form-control" 
-                                            value={this.state.noOfGames} onChange={this.updateNoOfGames}/>
+                                            value={this.state.attitude} onChange={this.updateAttitude}/>
                                     </div>
 
-                                    <button className="btn1 btn btn-success" onClick={this.getPlayers}>Get all the Player</button>
-                                    <button className="btn btn-success" onClick={this.getPlayerBySearchDetails}>Find the Player</button>
+                                    <button className="btn1 btn btn-success"  onClick={(e) => {this.getPlayers(e); }} >Get all the Player</button>
+                                    <button className="btn btn-success" onClick={(e) =>{this.getPlayerBySearchDetails(e); }}>Find the Player</button>
                                  </form>
                             </div>
                         </div>
@@ -207,7 +162,7 @@ export class BeginMatching extends React.Component {
 
                </div>
 
-               <div className='tabnamecn'>
+               <div className='tabnamecn '>
                 <h1 className = "text-center"> Players List</h1>
                 <table className = "table table-striped">
                     <thead>
@@ -223,7 +178,7 @@ export class BeginMatching extends React.Component {
                     </thead>
                     <tbody>
                         {
-                            this.state.players.map(
+                            this.state.players.sort((a, b) => a.numOfMatches - b.numOfMatches).map(
                                 player => 
                                 <tr key = {player.sno}>
                                      <td> {player.firstName}</td>   

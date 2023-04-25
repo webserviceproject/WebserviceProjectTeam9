@@ -110,7 +110,7 @@ public class PlayersDAOImpl implements PlayersDAOInterface {
 		try {
 			Session currentSession = entityManager.unwrap(Session.class);
 			Query<PlayersEntity> query = currentSession
-					.createQuery("from PlayersEntity p where p.rankLevel=:RANK_LEVEL", PlayersEntity.class);
+					.createQuery("from PlayersEntity p where p.rankLevel>=:RANK_LEVEL", PlayersEntity.class);
 			query.setParameter("RANK_LEVEL", ranklevel);
 			System.out.println(query.getQueryString());
 			list = query.getResultList();
@@ -144,7 +144,7 @@ public class PlayersDAOImpl implements PlayersDAOInterface {
 		try {
 			Session currentSession = entityManager.unwrap(Session.class);
 			Query<PlayersEntity> query = currentSession
-					.createQuery("from PlayersEntity p where p.numOfMatches=:NUMOFMATCHES", PlayersEntity.class);
+					.createQuery("from PlayersEntity p where p.numOfMatches >=:NUMOFMATCHES", PlayersEntity.class);
 			query.setParameter("NUMOFMATCHES", numOfMatches);
 			System.out.println(query.getQueryString());
 			list = query.getResultList();
